@@ -11,15 +11,15 @@
 
   outputs = { self, nixpkgs, homeManager }: {
     homeConfigurations = {
-      "someuser@somecomputer" = homeManager.lib.homeManagerConfiguration {
+      "pengyu@user-HP-ProBook-440-G6" = homeManager.lib.homeManagerConfiguration {
         configuration = {pkgs, ...}: {
           programs.home-manager.enable = true;
           home.packages = [ pkgs.hello ];
         };
 
         system = "x86_64-linux";
-        homeDirectory = "/home/someuser";
-        username = "someuser";
+        homeDirectory = "/home/pengyu";
+        username = "pengyu";
         stateVersion = "21.05";
       };
     };
